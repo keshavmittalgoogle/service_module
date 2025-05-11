@@ -1,0 +1,32 @@
+- name: name
+  description: Name of the service
+  varType: string
+  required: true
+  defaultValue: test-service
+- name: namespace
+  description: Namespace of the service
+  varType: string
+  required: true
+  defaultValue: test-namespace
+- name: service_type
+  description: Type of the service
+  varType: string
+  defaultValue: ClusterIP
+- name: selector_deployment_name
+  description: Name of the deployment
+  varType: string
+- name: ports
+  description: Exposed ports of the service
+  varType: |-
+    list(object({
+      port: number
+      target_port: number
+      protocol: string
+      name: string
+    }))
+  required: true
+  defaultValue:
+    - port: 80
+      target_port: 80
+      protocol: TCP
+      name: http
