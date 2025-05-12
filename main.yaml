@@ -14,4 +14,4 @@ spec:
     app: <var.selector_deployment_name>
     app.kubernetes.io/name: <var.selector_deployment_name>
     app.kubernetes.io/instance: <var.selector_deployment_name>
-    <var.selector_labels> # User input selector labels, if provided.
+    # <var.selector_labels> # User input selector labels, if provided.
