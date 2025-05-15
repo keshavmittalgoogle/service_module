@@ -6,9 +6,9 @@ metadata:
 spec:
   type: <var.service_type> # User input service type, default to ClusterIP if not provided.
   ports:
-    - port: <var.ports.service_port> # User input service port. Default to 80 if not provided.
-      targetPort: <var.ports.service_target_port> # User input service target port. Default to 80 if not provided.
-      protocol: <var.ports.service_protocol> # User input service protocol, default to TCP if not provided.
+    - port: <var.ports.port> # User input service port. Default to 80 if not provided.
+      targetPort: <var.ports.target_port> # User input service target port. Default to 80 if not provided.
+      protocol: <var.ports.protocol> # User input service protocol, default to TCP if not provided.
       name: <var.ports.target_name> # User input service target name.
   selector:
     app: <var.selector_deployment_name>
