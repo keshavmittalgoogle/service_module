@@ -6,10 +6,10 @@ metadata:
 spec:
   type: <var.service_type> # User input service type, default to ClusterIP if not provided.
   ports:
-    - port: <var.port.service_port> # User input service port. Default to 80 if not provided.
-      targetPort: <var.port.service_target_port> # User input service target port. Default to 80 if not provided.
-      protocol: <var.port.service_protocol> # User input service protocol, default to TCP if not provided.
-      name: <var.port.target_name> # User input service target name.
+    - port: <var.ports.service_port> # User input service port. Default to 80 if not provided.
+      targetPort: <var.ports.service_target_port> # User input service target port. Default to 80 if not provided.
+      protocol: <var.ports.service_protocol> # User input service protocol, default to TCP if not provided.
+      name: <var.ports.target_name> # User input service target name.
   selector:
     app: <var.selector_deployment_name>
     app.kubernetes.io/name: <var.selector_deployment_name>
