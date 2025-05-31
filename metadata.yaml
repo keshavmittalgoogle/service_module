@@ -51,4 +51,4 @@ spec:
           - source:
               source: Deployment
             spec:
-              outputExpr: "{port: \"80\", target_port: containers.ports.container_port, protocol: \"TCP\", target_name: containers.ports.name}"
+              outputExpr: "{port: containers.ports.container_port, target_port: containers.ports.container_port, target_name: containers.ports.name}"
